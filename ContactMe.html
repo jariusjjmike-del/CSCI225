@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+   
+<head>
+    <title>All ABout Me</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rEq1Z0bjdwc?si=o-j2y6zbjDfFjI4i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <form action="Feedback">
+        <h1>Feedback</h1>
+       
+        <p> *First Name: (required)
+             <input type="text" name="fname" placeholder="anonymous" required>
+        </p>
+        
+        <p> *Last Name: (required)
+             <input type="text" name="lname" placeholder="anonymous" required>
+        </p>
+        
+        <p> *Email: (required)
+            <input type="email" name="mail" placeholder="name@domain" required> 
+        </p>
+
+        <p> *Phone number:
+					<input type="tel" name="phone" placeholder="xxx-xxx-xxxx"  pattern="\d{3}-\d{3}-\d{4}">
+
+		</p>
+        
+        <p> Enter date:
+            <input type="date" name="depart" id="date">
+        </p>
+        
+        <p> Pick a color:
+            <input type="color" autofocus>
+        </p>
+        
+        <p>
+            Will you recommend this site?
+            <label>Yes <input type="radio" name="choice" value="Yes"></label>
+            <label> No <input type="radio" name="choice" value="No"></label>
+        </p>
+
+        <p>
+            Select your favorite website:
+            <select name="favsite" size = "7" multiple>
+                <option value="Google">Google</option>
+                <option value="Twitter">Twitter</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Snapchat">Snapchat</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Twitch">Twitch</option>
+                <option value="Youtube">Youtube</option>
+            </select>
+        </p>
+
+        <p>
+            Rate this website:
+            1<input type="range" min="10" name="rating">10
+        </p>
+
+        <p>
+            Additional Comments:
+            <textarea name="comment" id= "cols=4" rows="3">
+                
+            </textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Sumbit for Procession">
+            <input type="reset" value="Clear Form">
+        </p>
+
+        
+
+     </form>
+
+
+</body>
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
