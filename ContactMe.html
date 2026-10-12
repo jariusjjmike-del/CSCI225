@@ -1,97 +1,118 @@
 <!DOCTYPE html>
 
 <html>
-   
+
 <head>
     <title>All ABout Me</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/rEq1Z0bjdwc?si=o-j2y6zbjDfFjI4i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <form action="Feedback">
-        <h1>Feedback</h1>
-       
-        <p> *First Name: (required)
-             <input type="text" name="fname" placeholder="anonymous" required>
-        </p>
+    <div class="container">
+        <header class="row">
+            <nav class="col navbar" style="background-color: purple;">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="https://www.usca.edu">USC Aiken</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Schedule">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Assignment">Assignment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ContactInformation">Contact Information</a></li>
+                </ul>
+            </nav>
+        </header>
         
-        <p> *Last Name: (required)
-             <input type="text" name="lname" placeholder="anonymous" required>
-        </p>
-        
-        <p> *Email: (required)
-            <input type="email" name="mail" placeholder="name@domain" required> 
-        </p>
+        <div class="row">
+            <section class="col mt-5" id="video-section">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rEq1Z0bjdwc?si=o-j2y6zbjDfFjI4i"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+            
+            <section class="col" id="feedback-section">
+            <form action="Feedback">
+                <h1 class="collapse">Feedback</h1>
 
-        <p> *Phone number:
-					<input type="tel" name="phone" placeholder="xxx-xxx-xxxx"  pattern="\d{3}-\d{3}-\d{4}">
+                <div class="form-floating mb-3"> 
+                    <input type="text" name="fname" class="form-control" id="fname" placeholder="anonymous" required>
+                    <label for="fname">First Name:</label>
+                </div>
 
-		</p>
-        
-        <p> Enter date:
-            <input type="date" name="depart" id="date">
-        </p>
-        
-        <p> Pick a color:
-            <input type="color" autofocus>
-        </p>
-        
-        <p>
-            Will you recommend this site?
-            <label>Yes <input type="radio" name="choice" value="Yes"></label>
-            <label> No <input type="radio" name="choice" value="No"></label>
-        </p>
+                <p>
+                    <input type="text" name="lname" class="form-control" id="lname" placeholder="anonymous" required>
+                    <label for="lname">Last Name:</label>
+                </p>
 
-        <p>
-            Select your favorite website:
-            <select name="favsite" size = "7" multiple>
-                <option value="Google">Google</option>
-                <option value="Twitter">Twitter</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Snapchat">Snapchat</option>
-                <option value="Facebook">Facebook</option>
-                <option value="Twitch">Twitch</option>
-                <option value="Youtube">Youtube</option>
-            </select>
-        </p>
+                <p> *Email: (required)
+                    <input type="email" name="mail" placeholder="name@domain" required>
+                    <small class="form-text text-muted">Your email here</small>
+                </p>
 
-        <p>
-            Rate this website:
-            1<input type="range" min="10" name="rating">10
-        </p>
+                <p> *Phone number:
+                    <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" pattern="\d{3}-\d{3}-\d{4}">
 
-        <p>
-            Additional Comments:
-            <textarea name="comment" id= "cols=4" rows="3">
-                
+                </p>
+
+                <p> Enter date:
+                    <input type="date" name="depart" id="date">
+                </p>
+
+                <p> Pick a color:
+                    <input type="color" autofocus>
+                </p>
+
+                <p>
+                    Will you recommend this site?
+                    <label>Yes <input type="radio" name="choice" value="Yes"></label>
+                    <label> No <input type="radio" name="choice" value="No"></label>
+                </p>
+
+                <p>
+                    Select your favorite website:
+                    <select name="favsite" size="7" multiple>
+                        <option value="Google">Google</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Snapchat">Snapchat</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Twitch">Twitch</option>
+                        <option value="Youtube">Youtube</option>
+                    </select>
+                </p>
+
+                <p>
+                    Rate this website:
+                    1<input type="range" min="10" name="rating">10
+                </p>
+
+                <p>
+                    Additional Comments:
+                    <textarea name="comment" id="cols=4" rows="3">
+
             </textarea>
-        </p>
+                </p>
 
-        <p>
-            <input type="submit" value="Sumbit for Procession">
-            <input type="reset" value="Clear Form">
-        </p>
+                <p>
+                    <input type="submit" value="Sumbit for Procession">
+                    <input type="reset" value="Clear Form">
+                </p>
+            </section>
+            
 
-        
 
-     </form>
+
+            </form>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 
 
 </body>
-   
-    
-
-
-
-
-
-
-
-
-
-
-
-
 
 </html>

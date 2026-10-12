@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+p{
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+body {
+    background-image: url('../img/1344763.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 10%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 2rem 2rem 0;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+ul, 
+ol{
+    color: black;
+    font-weight: 200;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h2{
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h2 ~ p,
+h2 ~ ol,
+h2 ~ table {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s linear 1s;
+}
+
+h2:hover ~ p,
+h2:hover ~ ol,
+h2:hover ~ table {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+section,
+aside {
+    border: 1px solid #d5c4c4;
+    border-radius: 10px;
+}
+
+section:first-of-type {
+    width: 100%;
+    min-width: 0;
+    padding: 1rem 0.25rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 0;
+    border-radius: 0;
+}
+
+section:first-of-type h2 {
+    margin: 0 0 1rem;
+    padding-top: 0.65rem;
+    border-top: 6px solid #66add3;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+section:first-of-type p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+
+section:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    padding: 1rem 0.25rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 0;
+    border-radius: 0;
+}
+
+section:nth-of-type(2) h2,
+section:nth-of-type(3) h2,
+aside h2,
+footer h2 {
+    margin: 0 0 1rem;
+    padding-top: 0.65rem;
+    border-top: 6px solid #66add3;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+section:nth-of-type(2) p,
+section:nth-of-type(3) p,
+aside li {
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+
+section:nth-of-type(2) li:first-child p {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    text-decoration: none;
+}
+
+aside a{
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+aside a:hover {
+    opacity: 1;
+}
+
+aside {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 1rem 0.25rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 0;
+    border-radius: 0;
+}
+
+section:nth-of-type(3) {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    padding: 1rem 0.25rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 0;
+    border-radius: 0;
+}
+
+section:nth-of-type(3) table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+footer {
+    grid-column: 1 / -1;
+    margin: 0 -2rem;
+    padding: 1rem 2rem;
+    background-color: rgb(245, 143, 41);
+    text-align: center;
+}
+
+header {
+    grid-column: 1 / -1;
+    margin: 0 -2rem;
+    padding: 1rem 2rem;
+    background-color: rgb(245, 143, 41);
+    text-align: center;
+    
+}
+
+footer h2 {
+    max-width: 460px;
+    margin: 0 auto 0.75rem;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+footer p:first-letter {
+    font-size: 1em;
+}
+
+p:first-letter{
+    font-size: 2em;
+}
+
+td{
+    background-color: rgb(237, 202, 106);
+    padding: 15px;
+    border: 3px solid #ccc;
+    vertical-align: middle;
+    empty-cells: show;
+}
+
+@media (max-width: 700px) {
+    main {
+        display: block;
+        padding: 1rem;
+    }
+
+    section:first-of-type {
+        width: 100%;
+        min-width: 0;
+    }
+
+    section:nth-of-type(2),
+    section:nth-of-type(3),
+    aside {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    footer {
+        margin: 0 -1rem;
+        padding: 1rem;
+    }
+
+    header {
+        margin: 0 -1rem;
+        padding: 1rem;
+    }
+
+    section:nth-of-type(3) {
+        overflow-x: auto;
+    }
+
+    
+
+}
