@@ -29,6 +29,7 @@
             <section class="col mt-5" id="video-section">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/rEq1Z0bjdwc?si=o-j2y6zbjDfFjI4i"
                 title="YouTube video player" frameborder="0"
+                style="border: 4px solid #6f42c1; border-radius: 12px; box-shadow: 0 0 10px rgba(111, 66, 193, 0.35); background: #ffffff;"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
@@ -40,38 +41,52 @@
                 <div class="form-floating mb-3"> 
                     <input type="text" name="fname" class="form-control" id="fname" placeholder="anonymous" required>
                     <label for="fname">First Name:</label>
+                    <small class="form-text text-muted">Your first name here</small>
                 </div>
 
-                <p>
+                <div class="form-floating mb-3">
                     <input type="text" name="lname" class="form-control" id="lname" placeholder="anonymous" required>
                     <label for="lname">Last Name:</label>
-                </p>
+                     <small class="form-text text-muted">Your last name here</small>
+                </div>
 
-                <p> *Email: (required)
-                    <input type="email" name="mail" placeholder="name@domain" required>
+                <div class = "form-floating mb-3">
+                    <input type="email" name="mail" class="form-control" id="email" placeholder="name@domain" required>
+                    <label for="mail">Email:</label>
                     <small class="form-text text-muted">Your email here</small>
-                </p>
+                </div>
 
-                <p> *Phone number:
-                    <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" pattern="\d{3}-\d{3}-\d{4}">
+                <div class ="form-floating mb-3">
+                    <input type="tel" name="phone" class="form-control" id="tel" placeholder="xxx-xxx-xxxx" pattern="\d{3}-\d{3}-\d{4}">
+                    <label for="tel">Phone:</label>
+                     <small class="form-text text-muted">Your phone number here</small>
+                </div>
 
-                </p>
-
-                <p> Enter date:
+                <p class="fw-semibold"> Enter date:
                     <input type="date" name="depart" id="date">
                 </p>
 
-                <p> Pick a color:
+                <p class="fw-semibold"> Pick a color:
                     <input type="color" autofocus>
                 </p>
 
-                <p>
+                <p class= fw-semibold>
                     Will you recommend this site?
-                    <label>Yes <input type="radio" name="choice" value="Yes"></label>
-                    <label> No <input type="radio" name="choice" value="No"></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="choice" id="choice1" checked>
+                        <label class="form-check-label" for="choice1">
+                            Yes 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="choice" id="choice2">
+                        <label class="form-check-label" for="choice2">
+                            No
+                        </label>
+                    </div>
                 </p>
 
-                <p>
+                <p class="fw-semibold">
                     Select your favorite website:
                     <select name="favsite" size="7" multiple>
                         <option value="Google">Google</option>
@@ -84,22 +99,34 @@
                     </select>
                 </p>
 
-                <p>
+                <p class="fw-semibold">
                     Rate this website:
-                    1<input type="range" min="10" name="rating">10
+                    <label for="customRange1" class="form-label">1-10</label>
+                    <input type="range" class="form-range" min="1" max="10" id="customRange1">
                 </p>
 
-                <p>
+                <p class="fw-semibold">
                     Additional Comments:
-                    <textarea name="comment" id="cols=4" rows="3">
-
-            </textarea>
+                
+                <div class="mb-3">
+                    <label for ="textarea" class="form-label">Leave your comments down below!</label>
+                    <textarea class="form-control" id="cols4" rows="3"></textarea>
+                </div>
                 </p>
 
+                
                 <p>
-                    <input type="submit" value="Sumbit for Procession">
-                    <input type="reset" value="Clear Form">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                    <input class="btn btn-primary" type="reset" value="Clear">
                 </p>
+
+                <div class="alert alert-primary" role="alert">
+                Please make sure that all blanks are filled out before submission!
+                </div>
+
+                <div class="bg-primary m-10 p-10"></div>
+
+                
             </section>
             
 
@@ -112,6 +139,7 @@
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"></script>
 
+        
 
 </body>
 
